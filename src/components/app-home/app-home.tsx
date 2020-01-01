@@ -6,36 +6,14 @@ import { Component, State, Watch, h } from '@stencil/core';
   shadow: true
 } )
 export class AppHome {
-
-  @State() date: Date;
-
-  @Watch( 'date' )
-  watchHandler( newValue, oldValue ) {
-    console.log( 'oldValue: ', oldValue );
-    console.log( 'The value of date is: ', newValue );
-  }
-
-  setDate() {
-
-  }
-
-  componentDidLoad() {
-    console.log( this );
-    console.log( h );
-    document.body.style.background = 'black';
-  }
-
-
   render() {
-
     return (
       <div class='app-home'>
         <div class="swirley">
           <div class="ia-brand">
-            <img src="../../assets/ia.png" />
+            <img src="../../assets/ia-logo/ia-deco-05-2.png" />
           </div>
           <div class="swirley-img">
-
             <img src="../../assets/awesome.gif" alt="swirley"></img>
           </div>
         </div>

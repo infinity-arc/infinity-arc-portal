@@ -17,6 +17,7 @@ export namespace Components {
     'match': MatchResults;
   }
   interface AppRoot {}
+  interface AppRooter {}
   interface TestGenerate {
     'match': MatchResults;
   }
@@ -43,6 +44,12 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLAppRooterElement extends Components.AppRooter, HTMLStencilElement {}
+  var HTMLAppRooterElement: {
+    prototype: HTMLAppRooterElement;
+    new (): HTMLAppRooterElement;
+  };
+
   interface HTMLTestGenerateElement extends Components.TestGenerate, HTMLStencilElement {}
   var HTMLTestGenerateElement: {
     prototype: HTMLTestGenerateElement;
@@ -52,6 +59,7 @@ declare global {
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
+    'app-rooter': HTMLAppRooterElement;
     'test-generate': HTMLTestGenerateElement;
   }
 }
@@ -62,6 +70,7 @@ declare namespace LocalJSX {
     'match'?: MatchResults;
   }
   interface AppRoot {}
+  interface AppRooter {}
   interface TestGenerate {
     'match'?: MatchResults;
   }
@@ -70,6 +79,7 @@ declare namespace LocalJSX {
     'app-home': AppHome;
     'app-profile': AppProfile;
     'app-root': AppRoot;
+    'app-rooter': AppRooter;
     'test-generate': TestGenerate;
   }
 }
@@ -83,6 +93,7 @@ declare module "@stencil/core" {
       'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
       'app-profile': LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
       'app-root': LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+      'app-rooter': LocalJSX.AppRooter & JSXBase.HTMLAttributes<HTMLAppRooterElement>;
       'test-generate': LocalJSX.TestGenerate & JSXBase.HTMLAttributes<HTMLTestGenerateElement>;
     }
   }

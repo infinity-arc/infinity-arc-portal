@@ -1,10 +1,10 @@
 import { Component, h, Host, Prop, State } from "@stencil/core";
 
-@Component( {
+@Component({
   tag: "app-root",
   styleUrl: "app-root.css"
   // shadow: true
-} )
+})
 export class AppRoot {
   // @Prop() match: MatchResults;
   @State() mouseCoords: { x: number, y: number, offsetX: number, offsetY: number; };
@@ -12,6 +12,7 @@ export class AppRoot {
 
 
   componentDidLoad() {
+    console.log(location.pathname);
     // this.mouseCoords = { x: 0, y: 0, offsetX: 0, offsetY: 0 };
 
     // console.log( "Root mounted" );
@@ -32,14 +33,21 @@ export class AppRoot {
     // mainEl.style.height = ( window.innerWidth - navEl.clientHeight ).toString() + 'px';
 
   }
+  componentDidUpdate() {
+    console.log(location.pathname);
+  }
+
 
   render() {
     // console.log( "match: ", this.match );
     return (
       <Host>
-        <div>
+
           <header>
-            <h1>Stencil App Starter</h1>
+            <div class="brand">
+              <img src="../../assets/ia-logo/ia-block-01.png" />
+              <h1>Stencil App Starter</h1>
+            </div>
             <nav>
               <stencil-route-link url="/">
                 <a>Home</a>
@@ -52,17 +60,10 @@ export class AppRoot {
               </stencil-route-link>
             </nav>
           </header>
+          <app-page slotName="router">
+            <app-rooter></app-rooter>
+          </app-page>
 
-          <main>
-            <stencil-router>
-              <stencil-route-switch scrollTopOffset={0}>
-                <stencil-route url="/" component="app-home" exact={true} />
-                <stencil-route url="/profile/:name" component="app-profile" />
-                <stencil-route url="/test-generate" component="test-generate" />
-              </stencil-route-switch>
-            </stencil-router>
-            <test-generate></test-generate>
-          </main>
           {/* <div class="mouse-panel">
             <div>SCREEN Y:</div><div>{window.screen.availHeight}</div>
             <div>SCREEN X:</div><div>{window.screen.availWidth}</div>
@@ -73,8 +74,8 @@ export class AppRoot {
             <div>Mouse Offset X:</div><div>{this.mouseCoords.offsetX}</div>
             <div>Mouse Offset Y:</div><div>{this.mouseCoords.offsetY}</div>
           </div> */}
-        </div>
-        <div slot="generate"></div>
+
+
       </Host>
     );
   }

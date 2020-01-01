@@ -4,7 +4,7 @@ import { MatchResults } from '@stencil/router';
 @Component( {
   tag: 'app-profile',
   styleUrl: 'app-profile.css',
-  shadow: true
+  scoped: false
 } )
 export class AppProfile {
   @Prop() match: MatchResults;
@@ -23,7 +23,7 @@ export class AppProfile {
     console.log( this );
     if ( this.match && this.match.params.name ) {
       return (
-        <Host>
+
           <div class="app-profile">
             <p>
               Hello! My name is {this.normalize( this.match.params.name )}. My name was passed in
@@ -35,7 +35,6 @@ export class AppProfile {
             </button>
             </stencil-route-link>
           </div>
-        </Host>
       );
     }
   }

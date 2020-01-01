@@ -1,9 +1,9 @@
 main {
   display: block;
+  padding-top: 56px;
 }
 
 header {
-  background: #212f3c;
   color: white;
   height: 56px;
   display: flex;
@@ -12,6 +12,7 @@ header {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   position: fixed;
   width: 100vw;
+  transition-duration: 0.3s;
 }
 
 header h1 {
@@ -19,12 +20,31 @@ header h1 {
   font-weight: 500;
   color: #fff;
   padding: 0 12px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+flex:1;
+}
+
+header:hover{
+  background: blue;
+  transition-duration: 0.3s;
 }
 
 header nav {
   margin-right: 20px;
 }
+
+.brand{
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brand img{
+  height: 30px;
+}
+
 
 nav a {
   color: white;
