@@ -8,11 +8,14 @@
   Any global CSS variables should also be applied here.
 */
 
+@import "theme.scss";
+
 :root{
   box-sizing: border-box;
 }
 
 body {
+  background: $primary-main;
   min-width: 100vw;
   min-height: 100vh;
   height: auto;
@@ -32,7 +35,7 @@ body {
 
 // global variables
 .stencil-btn {
-  background: #5851ff;
+  // background: $primary-main;
   color: white;
   margin: 8px;
   border: none;
@@ -52,3 +55,9 @@ body {
   box-shadow: 0 3px 6px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.1);
   transform: translateY(1px);
 }
+
+
+
+// $black: ;
+
+// $accent: #517c8c;

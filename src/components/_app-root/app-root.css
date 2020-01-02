@@ -1,57 +1,11 @@
 main {
-  display: block;
-  padding-top: 56px;
-}
-
-header {
-  color: white;
-  height: 56px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  position: fixed;
-  width: 100vw;
-  transition-duration: 0.3s;
-}
 
-header h1 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #fff;
-  padding: 0 12px;
-  /* margin-left: 20px; */
-flex:1;
-}
-
-header:hover{
-  background: blue;
-  transition-duration: 0.3s;
-}
-
-header nav {
-  margin-right: 20px;
-}
-
-.brand{
-  padding-left: 20px;
-  display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.brand img{
-  height: 30px;
-}
-
-
-nav a {
-  color: white;
-  text-decoration: none;
-  text-decoration-line: unset;
-  text-align: center;
-  padding: 5px 5px;
+  padding-top: 56px;
+  div{
+    flex:1;
+  }
 }
 
 .mouse-panel {

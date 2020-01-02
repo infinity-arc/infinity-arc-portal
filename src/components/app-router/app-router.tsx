@@ -1,21 +1,23 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'app-rooter',
-  styleUrl: 'app-roouter.css',
+  tag: 'app-router',
+  styleUrl: 'app-router.css',
   // shadow: true
 })
-export class Rooter {
+export class ApplicationRouter {
 
   render() {
     return (
-      <stencil-router>
-            <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url="/profile/:name" component="app-profile" />
-              <stencil-route url="/test-generate" component="test-generate" />
-            </stencil-route-switch>
-          </stencil-router>
+      <main>
+        <stencil-router>
+          <stencil-route-switch scrollTopOffset={0}>
+            <stencil-route url="/" component="app-home" exact={true} />
+            <stencil-route url="/profile/:name" component="app-profile" />
+            <stencil-route url="/test-generate" component="test-generate" />
+          </stencil-route-switch>
+        </stencil-router>
+      </main>
     );
   }
 

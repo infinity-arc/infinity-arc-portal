@@ -12,12 +12,14 @@ import {
 } from '@stencil/router';
 
 export namespace Components {
+  interface AppCard {}
   interface AppHome {}
+  interface AppNav {}
   interface AppProfile {
     'match': MatchResults;
   }
   interface AppRoot {}
-  interface AppRooter {}
+  interface AppRouter {}
   interface TestGenerate {
     'match': MatchResults;
   }
@@ -26,10 +28,22 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLAppCardElement extends Components.AppCard, HTMLStencilElement {}
+  var HTMLAppCardElement: {
+    prototype: HTMLAppCardElement;
+    new (): HTMLAppCardElement;
+  };
+
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
     new (): HTMLAppHomeElement;
+  };
+
+  interface HTMLAppNavElement extends Components.AppNav, HTMLStencilElement {}
+  var HTMLAppNavElement: {
+    prototype: HTMLAppNavElement;
+    new (): HTMLAppNavElement;
   };
 
   interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
@@ -44,10 +58,10 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
-  interface HTMLAppRooterElement extends Components.AppRooter, HTMLStencilElement {}
-  var HTMLAppRooterElement: {
-    prototype: HTMLAppRooterElement;
-    new (): HTMLAppRooterElement;
+  interface HTMLAppRouterElement extends Components.AppRouter, HTMLStencilElement {}
+  var HTMLAppRouterElement: {
+    prototype: HTMLAppRouterElement;
+    new (): HTMLAppRouterElement;
   };
 
   interface HTMLTestGenerateElement extends Components.TestGenerate, HTMLStencilElement {}
@@ -56,30 +70,36 @@ declare global {
     new (): HTMLTestGenerateElement;
   };
   interface HTMLElementTagNameMap {
+    'app-card': HTMLAppCardElement;
     'app-home': HTMLAppHomeElement;
+    'app-nav': HTMLAppNavElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
-    'app-rooter': HTMLAppRooterElement;
+    'app-router': HTMLAppRouterElement;
     'test-generate': HTMLTestGenerateElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface AppCard {}
   interface AppHome {}
+  interface AppNav {}
   interface AppProfile {
     'match'?: MatchResults;
   }
   interface AppRoot {}
-  interface AppRooter {}
+  interface AppRouter {}
   interface TestGenerate {
     'match'?: MatchResults;
   }
 
   interface IntrinsicElements {
+    'app-card': AppCard;
     'app-home': AppHome;
+    'app-nav': AppNav;
     'app-profile': AppProfile;
     'app-root': AppRoot;
-    'app-rooter': AppRooter;
+    'app-router': AppRouter;
     'test-generate': TestGenerate;
   }
 }
@@ -90,10 +110,12 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'app-card': LocalJSX.AppCard & JSXBase.HTMLAttributes<HTMLAppCardElement>;
       'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+      'app-nav': LocalJSX.AppNav & JSXBase.HTMLAttributes<HTMLAppNavElement>;
       'app-profile': LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
       'app-root': LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-      'app-rooter': LocalJSX.AppRooter & JSXBase.HTMLAttributes<HTMLAppRooterElement>;
+      'app-router': LocalJSX.AppRouter & JSXBase.HTMLAttributes<HTMLAppRouterElement>;
       'test-generate': LocalJSX.TestGenerate & JSXBase.HTMLAttributes<HTMLTestGenerateElement>;
     }
   }

@@ -1,6 +1,6 @@
-import { Rooter } from './app-router';
+import { ApplicationRouter } from './app-router';
 
-describe('app-rooter', () => {
+describe('app-router', () => {
   it('builds', () => {
     expect(new Rooter()).toBeTruthy();
   });

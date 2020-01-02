@@ -43,28 +43,12 @@ export class AppRoot {
     return (
       <Host>
 
-          <header>
-            <div class="brand">
-              <img src="../../assets/ia-logo/ia-block-01.png" />
-              <h1>Stencil App Starter</h1>
-            </div>
-            <nav>
-              <stencil-route-link url="/">
-                <a>Home</a>
-              </stencil-route-link>
-              <stencil-route-link url="profile/stencil">
-                <a>Profile</a>
-              </stencil-route-link>
-              <stencil-route-link url="test-generate">
-                <a>Generated</a>
-              </stencil-route-link>
-            </nav>
-          </header>
-          <app-page slotName="router">
-            <app-rooter></app-rooter>
-          </app-page>
+      <app-nav></app-nav>
 
-          {/* <div class="mouse-panel">
+          <app-router></app-router>
+
+
+        {/* <div class="mouse-panel">
             <div>SCREEN Y:</div><div>{window.screen.availHeight}</div>
             <div>SCREEN X:</div><div>{window.screen.availWidth}</div>
             <div>Inner Height:</div><div>{window.innerHeight}</div>
