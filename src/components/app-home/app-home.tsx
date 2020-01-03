@@ -8,15 +8,16 @@ import { Component, h } from '@stencil/core';
 export class AppHome {
   render() {
     return (
-
       <div class='app-home'>
         <div class="swirley">
-          <div class="swirley-img">
-            <img src="../../assets/awesome.gif" alt="swirley"></img>
+          <div>
+            <img src="../../assets/ia-logo/BCCF3A0F-5648-4452-B1A8-2485F705AD94.jpg075.png" alt="ia-iso" />
           </div>
         </div>
-        <div>
-          <app-card></app-card>
+        <div class="card">
+          <app-card>
+            <app-card-header>HI</app-card-header>
+          </app-card>
           <app-card></app-card>
           <app-card></app-card>
         </div>

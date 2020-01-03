@@ -12,7 +12,6 @@ import {
 } from '@stencil/router';
 
 export namespace Components {
-  interface AppCard {}
   interface AppHome {}
   interface AppNav {}
   interface AppProfile {
@@ -27,12 +26,6 @@ export namespace Components {
 
 declare global {
 
-
-  interface HTMLAppCardElement extends Components.AppCard, HTMLStencilElement {}
-  var HTMLAppCardElement: {
-    prototype: HTMLAppCardElement;
-    new (): HTMLAppCardElement;
-  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -70,7 +63,6 @@ declare global {
     new (): HTMLTestGenerateElement;
   };
   interface HTMLElementTagNameMap {
-    'app-card': HTMLAppCardElement;
     'app-home': HTMLAppHomeElement;
     'app-nav': HTMLAppNavElement;
     'app-profile': HTMLAppProfileElement;
@@ -81,7 +73,6 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface AppCard {}
   interface AppHome {}
   interface AppNav {}
   interface AppProfile {
@@ -94,7 +85,6 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
-    'app-card': AppCard;
     'app-home': AppHome;
     'app-nav': AppNav;
     'app-profile': AppProfile;
@@ -110,7 +100,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      'app-card': LocalJSX.AppCard & JSXBase.HTMLAttributes<HTMLAppCardElement>;
       'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
       'app-nav': LocalJSX.AppNav & JSXBase.HTMLAttributes<HTMLAppNavElement>;
       'app-profile': LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
