@@ -10,7 +10,7 @@ export class Nav {
   render() {
     return (
 
-      <header>
+    <header>
       <div class="brand">
         <img src="../../assets/ia-logo/ia-block-01.png" />
         <h1>Stencil App Starter</h1>

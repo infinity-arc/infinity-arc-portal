@@ -10,11 +10,12 @@
 
 @import "theme.scss";
 
-:root{
+:root:before{
   box-sizing: border-box;
 }
 
 body {
+  display: relative;
   background: $primary-main;
   min-width: 100vw;
   min-height: 100vh;

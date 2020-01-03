@@ -9,22 +9,22 @@ export class AppHome {
   render() {
     return (
 
-
       <div class='app-home'>
+        <div class="swirley">
+          <div class="swirley-img">
+            <img src="../../assets/awesome.gif" alt="swirley"></img>
+          </div>
+        </div>
         <div>
           <app-card></app-card>
           <app-card></app-card>
           <app-card></app-card>
         </div>
-        <div class="swirley">
-          <div class="ia-brand">
-            <img src="../../assets/ia-logo/ia-deco-05-2.png" />
-          </div>
-          <div class="swirley-img">
-            <img src="../../assets/awesome.gif" alt="swirley"></img>
-          </div>
-        </div>
       </div>
     );
   }
 }
+
+// <div class="ia-brand">
+// <img src="../../assets/ia-logo/ia-deco-05-2.png" />
+// </div>

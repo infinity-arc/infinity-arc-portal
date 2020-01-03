@@ -1,18 +1,11 @@
 .app-home {
-  flex-direction: row;
-  justify-content: space-between;
   display: flex;
-  padding: 10px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  flex: 1;
   color: white;
-  right: 0;
-  top: 50%;
-  div:{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-  }
 }
 
 // button {
@@ -74,45 +67,25 @@
   transition-timing-function: ease-in-out;
 }
 
-.swirley {
-  overflow: hidden;
-  height: 100%;
-  div {
-    position: absolute;
+.swirley{
+  display: flex;
+
+
+  .swirley-img{
+    border: 1px solid white;
     display: block;
-  }
-  .ia-brand {
-    z-index: 1;
-    // height: 30vw;
-    @include moveCenter;
-    img {
-      height: 40vh;
-      max-width: 100vw;
-      width: auto;
-      position: inherit;
-      @include moveCenter;
-      @include hoverTrans;
-      &:hover {
-        @include moveCenterGrow;
-        @include hoverTrans;
-      }
-    }
-  }
-  .swirley-img {
-    z-index: -1;
-    min-width: 100vw;
-    top: 50%;
-    display: block;
-    transform: translateY(-50%);
     overflow: hidden;
-    img {
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%) translate(-50%, -50%);
-      -webkit-transform: translateX(-50%);
-      -moz-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      -o-transform: translateX(-50%);
+    border-radius: 40px;
+    flex: 1;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    img{
+      max-width: 100vw;
+      height: auto;
+      display: block;
     }
   }
+
 }
