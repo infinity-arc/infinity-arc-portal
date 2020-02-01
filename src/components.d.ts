@@ -12,6 +12,13 @@ import {
 } from '@stencil/router';
 
 export namespace Components {
+  interface AppCard {}
+  interface AppCardContent {}
+  interface AppCardDivider {}
+  interface AppCardHeader {
+    'class': string;
+    'str': string;
+  }
   interface AppHome {}
   interface AppNav {}
   interface AppProfile {
@@ -26,6 +33,30 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLAppCardElement extends Components.AppCard, HTMLStencilElement {}
+  var HTMLAppCardElement: {
+    prototype: HTMLAppCardElement;
+    new (): HTMLAppCardElement;
+  };
+
+  interface HTMLAppCardContentElement extends Components.AppCardContent, HTMLStencilElement {}
+  var HTMLAppCardContentElement: {
+    prototype: HTMLAppCardContentElement;
+    new (): HTMLAppCardContentElement;
+  };
+
+  interface HTMLAppCardDividerElement extends Components.AppCardDivider, HTMLStencilElement {}
+  var HTMLAppCardDividerElement: {
+    prototype: HTMLAppCardDividerElement;
+    new (): HTMLAppCardDividerElement;
+  };
+
+  interface HTMLAppCardHeaderElement extends Components.AppCardHeader, HTMLStencilElement {}
+  var HTMLAppCardHeaderElement: {
+    prototype: HTMLAppCardHeaderElement;
+    new (): HTMLAppCardHeaderElement;
+  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -63,6 +94,10 @@ declare global {
     new (): HTMLTestGenerateElement;
   };
   interface HTMLElementTagNameMap {
+    'app-card': HTMLAppCardElement;
+    'app-card-content': HTMLAppCardContentElement;
+    'app-card-divider': HTMLAppCardDividerElement;
+    'app-card-header': HTMLAppCardHeaderElement;
     'app-home': HTMLAppHomeElement;
     'app-nav': HTMLAppNavElement;
     'app-profile': HTMLAppProfileElement;
@@ -73,6 +108,13 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface AppCard {}
+  interface AppCardContent {}
+  interface AppCardDivider {}
+  interface AppCardHeader {
+    'class'?: string;
+    'str'?: string;
+  }
   interface AppHome {}
   interface AppNav {}
   interface AppProfile {
@@ -85,6 +127,10 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'app-card': AppCard;
+    'app-card-content': AppCardContent;
+    'app-card-divider': AppCardDivider;
+    'app-card-header': AppCardHeader;
     'app-home': AppHome;
     'app-nav': AppNav;
     'app-profile': AppProfile;
@@ -100,6 +146,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'app-card': LocalJSX.AppCard & JSXBase.HTMLAttributes<HTMLAppCardElement>;
+      'app-card-content': LocalJSX.AppCardContent & JSXBase.HTMLAttributes<HTMLAppCardContentElement>;
+      'app-card-divider': LocalJSX.AppCardDivider & JSXBase.HTMLAttributes<HTMLAppCardDividerElement>;
+      'app-card-header': LocalJSX.AppCardHeader & JSXBase.HTMLAttributes<HTMLAppCardHeaderElement>;
       'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
       'app-nav': LocalJSX.AppNav & JSXBase.HTMLAttributes<HTMLAppNavElement>;
       'app-profile': LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;

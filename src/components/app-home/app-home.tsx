@@ -8,19 +8,22 @@ import { Component, h } from '@stencil/core';
 export class AppHome {
   render() {
     return (
-      <div class='app-home'>
-        <div class="swirley">
-          <div>
+      <div class="app-home">
+        <div class="ia-logo">
             <img src="../../assets/ia-logo/BCCF3A0F-5648-4452-B1A8-2485F705AD94.jpg075.png" alt="ia-iso" />
-          </div>
         </div>
-        <div class="card">
-          <app-card>
-            <app-card-header>HI</app-card-header>
+
+          <app-card class="app-home-card">
+            <app-card-header str="header">
+              <div>This is a child component</div>
+            </app-card-header>
+            <app-card-divider></app-card-divider>
+            <app-card-content></app-card-content>
+            <app-card-divider></app-card-divider>
           </app-card>
-          <app-card></app-card>
-          <app-card></app-card>
-        </div>
+
+
+
       </div>
     );
   }
