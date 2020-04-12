@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/jest": "25.1.5",
     "@types/puppeteer": "2.0.1",
-    "jest": "24.9.0",
+    "jest": "25.3.0",
     "jest-cli": "25.2.7",
     "puppeteer": "2.1.1"
   }
