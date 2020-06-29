@@ -18,7 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "25.2.1",
-    "@types/puppeteer": "2.0.1",
+    "@types/puppeteer": "3.0.1",
     "jest": "25.4.0",
     "jest-cli": "25.4.0",
     "puppeteer": "3.0.2"
